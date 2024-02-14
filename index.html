@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive ER Diagram Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="navbar_container">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">temp2</a></li>
+            <li><a href="#">temp3</a></li>
+          </ul>
+        </div>
+        <script>
+          window.onscroll = function () {
+            scrollFunction();
+          };
+        </script>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero section-->
+      <div class="hero_container">
+        <div class="hero_content">
+          <h1>PostgreSQL to ER diagram</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            nulla odit ipsa. Soluta distinctio magnam reiciendis, facilis
+            architecto fugit alias eaque at voluptatibus expedita vero
+            doloremque incidunt pariatur error iste modi saepe et ducimus sunt
+            illo esse, autem quaerat eligendi repellendus. Suscipit dicta
+            expedita molestias, temporibus neque itaque ut asperiores!
+          </p>
+        </div>
+      </div>
+      <div class="sql_container">
+        <!-- Code section -->
+        <div class="code_container">
+          <h1>SQL program</h1>
+          <div class="code_content">
+            <textarea
+              id="postgres-code"
+              placeholder="Enter PostgreSQL code here"
+            ></textarea>
+            <div class="buttons">
+              <button id="generate-diagram">Generate Diagram</button>
+              <button id="clear-code">Clear</button>
+            </div>
+          </div>
+        </div>
+        <!-- Diagram section -->
+        <div class="diagram_container">
+          <h1>ER Diagram</h1>
+          <div class="diagram_content">
+            <!-- ER Diagram will be displayed here -->
+          </div>
+        </div>
+      </div>
+      <div class="infoboxes">
+        <div class="infoboxes_container">
+          <div class="box">
+            <img src="" alt="" />
+            <h2>Test</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum quisquam fugit libero id laboriosam obcaecati tempora
+              debitis explicabo excepturi eligendi.
+            </p>
+          </div>
+          <div class="box">
+            <img src="" alt="" />
+            <h2>Test</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum quisquam fugit libero id laboriosam obcaecati tempora
+              debitis explicabo excepturi eligendi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="vadsattahar"></div>
+      <div class="extra_container">
+        <div class="extra_content">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="">My Website</a></li>
+            <li><a href="">Github</a></li>
+            <li><a href="">Testing1</a></li>
+            <li><a href="">Testing2</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
