@@ -14,6 +14,7 @@ Custom shapes for entities
   - Tables
   - Relationships
   - Attributes
+
 Custom shapes for lines
   - Many to many
   - Many to exacly one
