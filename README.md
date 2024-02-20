@@ -21,4 +21,6 @@ Custom shapes for lines
   - Many to exacly one
   - Many to at least one
 
+Let user choose between file or text, 
+Let user decide between standard diagram or SQL-flow
 
