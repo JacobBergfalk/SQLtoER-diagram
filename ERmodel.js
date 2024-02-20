@@ -221,25 +221,33 @@ function createLines(graph, entityName, attributes) {
 
       graph.addCell(link);
       links.push(link);
-    } else {
-      if (Object.values(tableShapes).includes(attribute.targetTable)) {
-        var link = new joint.shapes.standard.Link({
-          source: { id: relationShapes[entityName].id },
-          target: { id: tableShapes[attribute.targetTable].id },
-          attrs: { ".marker-target": {} },
-        });
-
-        graph.addCell(link);
-        links.push(link);
-      }
     }
   });
 
-  links;
+  // If the entity is a relationship, create links between it and its referenced tables
+  if (relationShapes[entityName]) {
+    attributes.forEach(function (attribute) {
+      if (attribute.isForeignKey) {
+        var targetTableName = attribute.targetTable;
+        var targetTableShape = tableShapes[targetTableName];
+        if (targetTableShape) {
+          var link = new joint.shapes.standard.Link({
+            source: { id: relationShapes[entityName].id },
+            target: { id: targetTableShape.id },
+            attrs: { ".marker-target": {} },
+          });
+
+          graph.addCell(link);
+          links.push(link);
+        }
+      }
+    });
+  }
+
+  return links;
 }
 
 // FUNCITONALITY TO DIFFERENT TYPES OF LINES  ? FUNCTIONS ?
-
 
 // Sample SQL code
 var sqlCode = `
