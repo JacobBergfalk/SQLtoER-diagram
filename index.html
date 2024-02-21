@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive ER Diagram Generator</title>
-    <link rel="stylesheet" href="styless.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,33 +17,43 @@
     <header>
       <!-- Navigation Bar -->
       <nav class="navbar">
+        <!-- Title on the left -->
+        <div class="navbar_title">SQL to ER-Diagram</div>
+        <!-- Links on the right -->
         <div class="navbar_container">
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">temp2</a></li>
-            <li><a href="#">temp3</a></li>
+            <li class="navbar_links"><a href="#">About</a></li>
+            <li class="navbar_links"><a href="#">temp2</a></li>
+            <li class="navbar_links"><a href="#">temp3</a></li>
           </ul>
         </div>
-        <script>
-          window.onscroll = function () {
-            scrollFunction();
-          };
-        </script>
       </nav>
     </header>
+    <div class="divider"></div>
     <main>
       <!-- Hero section-->
       <div class="hero_container">
         <div class="hero_content">
-          <h1>PostgreSQL to ER diagram</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-            nulla odit ipsa. Soluta distinctio magnam reiciendis, facilis
-            architecto fugit alias eaque at voluptatibus expedita vero
-            doloremque incidunt pariatur error iste modi saepe et ducimus sunt
-            illo esse, autem quaerat eligendi repellendus. Suscipit dicta
-            expedita molestias, temporibus neque itaque ut asperiores!
-          </p>
+          <div class="hero_text">
+            <h1>PostgreSQL to ER diagram</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              nulla odit ipsa. Soluta distinctio magnam reiciendis, facilis
+              architecto fugit alias eaque at voluptatibus expedita vero
+              doloremque ADD LINKS HERE IN MIDDLE TO A WIKIPEDIA sunt illo esse,
+              autem MAKE IT LOOK GOOD Suscipit dicta expedita molestias,
+              temporibus neque itaque ut asperiores! Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Veniam repudiandae porro, odit
+              nostrum atque necessitatibus soluta praesentium numquam earum quod
+              delectus sint modi, ipsam dolorem? Amet consequuntur dolorum
+              quisquam fugiat sunt repellat aspernatur fugit, inventore quam
+              corrupti illum omnis quae iure, impedit distinctio laborum
+              mollitia laboriosam odio vel similique suscipit.
+            </p>
+          </div>
+        </div>
+        <div class="hero_example">
+          <div class="hero_example_container"></div>
         </div>
       </div>
       <div class="sql_container">
@@ -51,6 +61,7 @@
         <div class="code_container">
           <h1>SQL program</h1>
           <div class="code_content">
+            <div class="shadow"></div>
             <textarea
               id="postgres-code"
               placeholder="Enter PostgreSQL code here"
@@ -64,30 +75,70 @@
         <!-- Diagram section -->
         <div class="diagram_container">
           <h1>ER Diagram</h1>
+          <!-- Add shadow here -->
           <div class="diagram_content">
+            <div class="shadow"></div>
+            <div class="diagram_script"></div>
             <!-- ER Diagram will be displayed here -->
           </div>
         </div>
       </div>
+
       <div class="infoboxes">
+        <h1>The basics</h1>
         <div class="infoboxes_container">
-          <div class="box">
-            <img src="" alt="" />
-            <h2>Test</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum quisquam fugit libero id laboriosam obcaecati tempora
-              debitis explicabo excepturi eligendi.
-            </p>
+          <div class="container">
+            <div class="shadow"></div>
+            <div class="info_box">
+              <h3>test</h3>
+
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Assumenda rem, quas iure maiores enim, aut ducimus cum non illum
+                aspernatur fugiat voluptatibus praesentium dolorem, error itaque
+                doloribus
+              </p>
+            </div>
           </div>
-          <div class="box">
-            <img src="" alt="" />
-            <h2>Test</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum quisquam fugit libero id laboriosam obcaecati tempora
-              debitis explicabo excepturi eligendi.
-            </p>
+
+          <div class="container">
+            <div class="shadow"></div>
+            <div class="info_box">
+              <h3>test</h3>
+
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Assumenda rem, quas iure maiores enim, aut ducimus cum non illum
+                aspernatur fugiat voluptatibus praesentium dolorem, error itaque
+                doloribus
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="shadow"></div>
+            <div class="info_box">
+              <h3>test</h3>
+
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Assumenda rem, quas iure maiores enim, aut ducimus cum non illum
+                aspernatur fugiat voluptatibus praesentium dolorem, error itaque
+                doloribus
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="shadow"></div>
+            <div class="info_box">
+              <h3>test</h3>
+
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Assumenda rem, quas iure maiores enim, aut ducimus cum non illum
+                aspernatur fugiat voluptatibus praesentium dolorem, error itaque
+                doloribus
+              </p>
+            </div>
           </div>
         </div>
       </div>

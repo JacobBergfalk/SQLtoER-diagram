@@ -2,42 +2,33 @@ body {
   margin: 0;
   padding: 0;
   font-family: Mina, sans-serif;
-  background-image: linear-gradient(
-    to bottom,
-    #c9bbcf,
-    #c6c9de,
-    #c5d7e7,
-    #cae4eb,
-    #d6efed
-  );
+  background-color: #fff3cf;
   min-height: 100vh;
 }
 
+.divider {
+  border: 1px solid #000000; /* Add a 1px solid border at the bottom */
+  margin: 0px 2rem;
+}
+
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
   display: flex;
-  padding: 10px 0;
-  text-align: center;
-  justify-content: center;
+  justify-content: space-between; /* To push title and links to opposite ends */
+  align-items: center;
+  padding: 10px 20px;
+}
+.navbar_title {
+  font-size: 1.2rem;
 }
 
 .navbar_container {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
   padding: 20px;
   width: 25rem;
-  transition: background-color 0.3s ease;
   border-radius: 16px;
-}
-
-.navbar_container.scrolled {
-  /* LITE STUTTER NÄR SCROLLAR, UPPDATERA DETTA */
-  background: rgba(255, 255, 255, 0.33);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.59);
+  flex: 1; /* Take up remaining space */
 }
 
 nav ul {
@@ -48,36 +39,55 @@ nav ul {
 
 nav ul li {
   display: inline;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  padding: 10px 20px;
 }
 
 main {
   display: grid;
   grid-template-rows: 1fr auto;
-  padding: 60px;
 }
 .hero_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 10rem 20px;
-  text-align: center;
 }
 
-.hero_content {
-  max-width: 800px;
-  margin: 0 auto;
+.hero_text {
+  padding-right: 20px; /* Add spacing between text and blank div */
 }
 
-.hero_content h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.hero_text h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .hero_content p {
   font-size: 1.1em;
+}
+
+.hero_example {
+}
+
+.hero_example_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: inset -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .sql_container {
@@ -86,22 +96,30 @@ main {
   height: 40rem;
   gap: 40px;
   margin: 0 8%;
-  justify-content: center;
+  padding-bottom: 5rem;
+  position: relative;
 }
 
 .sql_container h1 {
   font-size: 1.5rem;
 }
 
+.shadow {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); /* Adjust opacity as needed */
+  border-radius: 16px;
+  z-index: -1;
+}
+
 .code_content,
 .diagram_content {
-  background: rgba(175, 163, 214, 0.33);
+  background-color: #ffcccc; /* Adjust background color */
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 2px solid rgba(175, 163, 214, 0.59);
-  height: 100%;
+  border: 2px solid #000000; /* Adjust border color */
 }
 
 .code_container {
@@ -110,6 +128,7 @@ main {
   margin-right: auto;
   justify-content: center;
   margin: 0;
+  position: relative;
 }
 
 .code_container h1 {
@@ -128,8 +147,7 @@ textarea {
   width: calc(100% - 22px); /* Adjust width to fit border to border */
   height: calc(100% - 22px); /* Adjust height to fit border to border */
   padding: 10px;
-  border-radius: 16px;
-  border: 1px solid rgba(175, 163, 214, 0.59); /* Remove border */
+  border-radius: 10px;
   resize: none;
   background: transparent; /* Make the background transparent */
   outline: none; /* Remove the default textarea outline */
@@ -138,11 +156,7 @@ textarea {
 
 .diagram_container {
   width: 100%;
-  max-width: 100%; /* Set maximum width to 100% */
-  height: auto; /* Reset height to auto */
   margin: 0 auto; /* Center the diagram container horizontally */
-  /*max-height: 40rem; /* Set maximum height */
-  /*overflow: visible; /* Add overflow auto to allow scrolling if needed */
 }
 
 .diagram_container h1 {
@@ -150,39 +164,41 @@ textarea {
 }
 
 .diagram_content {
-  max-height: 93%;
-  overflow: auto; /* Add overflow auto to allow scrolling if needed */
+  position: relative;
+
+  height: 100%;
 }
 
-.buttons {
-  text-align: center;
-  position: absolute; /* Position the buttons relative to code_content */
-  left: 0; /* Align the buttons to the left */
-  width: 100%; /* Ensure buttons span the entire width */
-  padding: 10px; /* Add padding for spacing */
-  box-sizing: border-box; /* Include padding in the width calculation */
-  text-align: center; /* Center align the buttons */
+.infoboxes {
+  padding: 5rem;
 }
 
-.additional_boxes {
-  background: linear-gradient(
-    to bottom,
-    #c9bbcf,
-    #c6c9de,
-    #c5d7e7,
-    #cae4eb,
-    #d6efed
-  );
-  padding: 20px;
+.infoboxes_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Equal width columns by default */
+  grid-auto-rows: minmax(150px, auto); /* Flexible rows */
+  gap: 30px; /* Spacing between boxes */
+}
+
+.container:nth-child(odd) .info_box {
+  background-color: #ffcccc; /* Adjust background color for odd rows */
+  grid-column-end: span 2; /* Make odd boxes wider */
+}
+
+.container:nth-child(even) .info_box {
+  background-color: #ccffcc; /* Adjust background color for even rows */
+}
+
+.container {
+  position: relative;
   display: flex;
-  justify-content: space-between;
 }
 
-.box {
-  width: calc(33.33% - 20px); /* Adjust width as needed */
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
+.info_box {
+  background-color: #ffcccc; /* Adjust background color */
+  padding: 32px;
+  border: 2px solid #000000; /* Adjust border color */
+  border-radius: 16px;
 }
 
 button {
@@ -198,6 +214,16 @@ button {
   ); /* KÖR SAMMA FÄRG SOM NAVBAR LÄNKAR*/
   color: white;
   cursor: pointer;
+}
+
+.buttons {
+  text-align: center;
+  position: absolute; /* Position the buttons relative to code_content */
+  left: 0; /* Align the buttons to the left */
+  width: 100%; /* Ensure buttons span the entire width */
+  padding: 10px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  text-align: center; /* Center align the buttons */
 }
 
 button:hover {
