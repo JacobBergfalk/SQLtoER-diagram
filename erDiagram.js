@@ -169,5 +169,39 @@ function createLines(graph, entityName, attributes) {
     });
   }
 }
+/*
+Sample SQL code
 
-// FUNCITONALITY TO DIFFERENT TYPES OF LINES  ? FUNCTIONS ?
+  CREATE TABLE Users (
+    id INT,
+    name VARCHAR(50),
+    email VARCHAR(50),
+    PRIMARY KEY (id)
+  );
+
+  CREATE TABLE Orders (
+    id INT PRIMARY KEY,
+    user_id INT, 
+    amount DECIMAL(10, 2),
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES Users (id)
+  );
+
+  CREATE TABLE Test (
+    id INT,
+    name INT,
+    korv INT,
+    ris INT,
+    kott INT,
+    FOREIGN KEY (ris, kott, korv) REFERENCES Users (id)
+  );
+
+  CREATE TABLE Relation (
+    trying INT,
+    test2 INT,
+    PRIMARY KEY(trying, test2),
+    FOREIGN KEY (trying) REFERENCES Users(id),
+    FOREIGN KEY (test2) REFERENCES Orders(id)
+  );
+
+*/
