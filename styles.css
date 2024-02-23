@@ -176,6 +176,7 @@ textarea {
   grid-template-columns: repeat(3, 1fr); /* Equal width columns by default */
   grid-auto-rows: minmax(150px, auto); /* Flexible rows */
   gap: 30px; /* Spacing between boxes */
+  padding-top: 1rem;
 }
 
 .container:nth-child(odd) .info_box {
@@ -209,33 +210,85 @@ textarea {
   transform: scale(1.06); /* Enlarge the box on hover */
 }
 
-button {
-  padding: 10px 20px;
-  margin: 0 5px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgba(
-    175,
-    163,
-    214,
-    0.59
-  ); /* KÖR SAMMA FÄRG SOM NAVBAR LÄNKAR*/
-  color: white;
-  cursor: pointer;
-}
-
 .buttons {
   text-align: center;
-  position: absolute; /* Position the buttons relative to code_content */
-  left: 0; /* Align the buttons to the left */
-  width: 100%; /* Ensure buttons span the entire width */
-  padding: 10px; /* Add padding for spacing */
-  box-sizing: border-box; /* Include padding in the width calculation */
-  text-align: center; /* Center align the buttons */
 }
 
-button:hover {
-  background-color: rgba(175, 163, 214, 2);
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 0.8rem;
+  margin: 5px;
+}
+
+button.generic-btn {
+  font-weight: 600;
+  color: #382b22;
+  text-transform: uppercase;
+  padding: 1em 1.5em;
+  background: #fff0f0;
+  border: 2px solid #b18597;
+  border-radius: 10px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1),
+    -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    background 150ms cubic-bezier(0, 0, 0.58, 1),
+    -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.generic-btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9c4d2;
+  border-radius: inherit;
+  -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+  -webkit-transform: translate3d(0, 0.75em, -1em);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    box-shadow 150ms cubic-bezier(0, 0, 0.58, 1),
+    -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.generic-btn:hover {
+  background: #ffe9e9;
+  -webkit-transform: translate(0, 0.25em);
+  transform: translate(0, 0.25em);
+}
+
+button.generic-btn:hover::before {
+  -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+  -webkit-transform: translate3d(0, 0.5em, -1em);
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.generic-btn:active {
+  background: #ffe9e9;
+  -webkit-transform: translate(0em, 0.75em);
+  transform: translate(0em, 0.75em);
+}
+
+button.generic-btn:active::before {
+  -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  -webkit-transform: translate3d(0, 0, -1em);
+  transform: translate3d(0, 0, -1em);
 }
 
 .links {
