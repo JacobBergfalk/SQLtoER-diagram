@@ -16,3 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     diagramScriptDiv.innerHTML = "";
   });
 });
+
+function toggleButton(button) {
+  button.classList.toggle("pressed");
+}

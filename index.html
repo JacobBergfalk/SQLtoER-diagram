@@ -80,10 +80,10 @@
               placeholder="Enter PostgreSQL code here"
             ></textarea>
             <div class="buttons">
-              <button class="generic-btn" id="generate-diagram">
+              <button class="generic_btn" id="generate-diagram">
                 Generate Diagram
               </button>
-              <button class="generic-btn" id="clear-code">Clear</button>
+              <button class="generic_btn" id="clear-code">Clear</button>
             </div>
           </div>
         </div>
@@ -102,9 +102,27 @@
       <div class="infoboxes">
         <h1>The basics</h1>
         <div class="info_buttons">
-          <button class="generic-btn" id="entities">Entities</button>
-          <button class="generic-btn" id="relationships">Relationships</button>
-          <button class="generic-btn" id="attributes">Attributes</button>
+          <button
+            class="selector_btn"
+            id="entities"
+            onclick="toggleButton(this)"
+          >
+            Entities
+          </button>
+          <button
+            class="selector_btn"
+            id="relationships"
+            onclick="toggleButton(this)"
+          >
+            Relationships
+          </button>
+          <button
+            class="selector_btn"
+            id="attributes"
+            onclick="toggleButton(this)"
+          >
+            Attributes
+          </button>
         </div>
         <div class="infoboxes_container">
           <div class="container">

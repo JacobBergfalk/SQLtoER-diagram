@@ -209,7 +209,7 @@ textarea {
 .info_box:hover {
   transform: scale(1.06); /* Enlarge the box on hover */
 }
-
+/* BUTTONS */
 .buttons {
   text-align: center;
 }
@@ -225,15 +225,10 @@ button {
   font-family: inherit;
   font-size: 0.8rem;
   margin: 5px;
-}
-
-button.generic-btn {
   font-weight: 600;
-  color: #382b22;
   text-transform: uppercase;
   padding: 1em 1.5em;
-  background: #fff0f0;
-  border: 2px solid #b18597;
+  border: 2px solid;
   border-radius: 10px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -244,19 +239,14 @@ button.generic-btn {
     -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
 }
 
-button.generic-btn::before {
+button::before {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  background: #f9c4d2;
   border-radius: inherit;
-  -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
-  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
   -webkit-transform: translate3d(0, 0.75em, -1em);
   transform: translate3d(0, 0.75em, -1em);
   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
@@ -265,30 +255,76 @@ button.generic-btn::before {
     -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 }
 
-button.generic-btn:hover {
-  background: #ffe9e9;
-  -webkit-transform: translate(0, 0.25em);
+button:hover {
   transform: translate(0, 0.25em);
 }
 
-button.generic-btn:hover::before {
-  -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
-  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+button:hover::before {
   -webkit-transform: translate3d(0, 0.5em, -1em);
   transform: translate3d(0, 0.5em, -1em);
 }
 
-button.generic-btn:active {
-  background: #ffe9e9;
+button.generic_btn:active {
   -webkit-transform: translate(0em, 0.75em);
   transform: translate(0em, 0.75em);
 }
 
-button.generic-btn:active::before {
-  -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+button.generic_btn:active::before {
   -webkit-transform: translate3d(0, 0, -1em);
   transform: translate3d(0, 0, -1em);
+}
+
+button.pressed {
+  transform: translate(0em, 0.75em);
+}
+
+button.pressed::before {
+  transform: translate3d(0, 0, -1em);
+}
+
+.generic_btn {
+  background-color: #fff0f0;
+  border-color: #b18597;
+}
+
+.generic_btn::before {
+  background: #f9c4d2;
+  -webkit-box-shadow: 0 0 0 2px #b18597;
+  box-shadow: 0 0 0 2px #b18597;
+}
+
+/* Custom colors for buttons*/
+#entities {
+  background-color: #b1d0d6;
+  border-color: #869fa4;
+}
+
+#entities::before {
+  background: #b7c7ca;
+  -webkit-box-shadow: 0 0 0 2px #869fa4;
+  box-shadow: 0 0 0 2px #869fa4;
+}
+
+#relationships {
+  background-color: #f5ddbd;
+  border-color: #cbb79c;
+}
+
+#relationships::before {
+  background: #ebdac3;
+  -webkit-box-shadow: 0 0 0 2px #cbb79c;
+  box-shadow: 0 0 0 2px #cbb79c;
+}
+
+#attributes {
+  background-color: #d7e8c8; /* Example custom color for Attributes button */
+  border-color: #acb9a0; /* Example custom border color for Attributes button */
+}
+
+#attributes::before {
+  background: #d7e8c8;
+  -webkit-box-shadow: 0 0 0 2px #acb9a0;
+  box-shadow: 0 0 0 2px #acb9a0;
 }
 
 .links {
