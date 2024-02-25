@@ -21,9 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function toggleEntitiesBlocks() {
-    var entityBlocks = document.querySelectorAll("#entities");
+    var entityBlocks = document.querySelectorAll(".container#entities");
     entityBlocks.forEach(function (block) {
-      block.classList.toggle("hidden");
+      if (block.style.display === "none") {
+        block.style.display = "block"; // Show the block before toggling opacity
+        setTimeout(() => {
+          block.classList.toggle("hidden");
+        }, 10); // Delay the opacity transition to ensure the display transition completes
+      } else {
+        block.classList.toggle("hidden");
+        setTimeout(() => {
+          block.style.display = "none"; // Hide the block after toggling opacity
+        }, 380); // Adjust the delay to match the transition duration
+      }
     });
   }
 
@@ -35,7 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleRelationshipBlocks() {
     var entityBlocks = document.querySelectorAll("#relationships");
     entityBlocks.forEach(function (block) {
-      block.classList.toggle("hidden");
+      if (block.style.display === "none") {
+        block.style.display = "block"; // Show the block before toggling opacity
+        setTimeout(() => {
+          block.classList.toggle("hidden");
+        }, 10); // Delay the opacity transition to ensure the display transition completes
+      } else {
+        block.classList.toggle("hidden");
+        setTimeout(() => {
+          block.style.display = "none"; // Hide the block after toggling opacity
+        }, 380); // Adjust the delay to match the transition duration
+      }
     });
   }
 
@@ -47,7 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleAttributeBlocks() {
     var entityBlocks = document.querySelectorAll("#attributes");
     entityBlocks.forEach(function (block) {
-      block.classList.toggle("hidden");
+      if (block.style.display === "none") {
+        block.style.display = "block"; // Show the block before toggling opacity
+        setTimeout(() => {
+          block.classList.toggle("hidden");
+        }, 10); // Delay the opacity transition to ensure the display transition completes
+      } else {
+        block.classList.toggle("hidden");
+        setTimeout(() => {
+          block.style.display = "none"; // Hide the block after toggling opacity
+        }, 380); // Adjust the delay to match the transition duration
+      }
     });
   }
 });

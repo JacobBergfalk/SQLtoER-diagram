@@ -181,12 +181,17 @@ textarea {
 
 .container {
   position: relative;
+  opacity: 1;
   transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+  opacity: 0; /* Set opacity to 0 when hidden */
+  pointer-events: none; /* Disable pointer events when hidden */
 }
 
 #entities .info_box {
   background-color: #d7e8c8;
-  grid-column-end: span 2; /* MAKE WORK ????*/
 }
 #relationships .info_box {
   background-color: #b1d0d6;
@@ -336,14 +341,6 @@ button.pressed::before {
 
 .links:hover {
   background-size: 4px 50px;
-}
-
-.hidden {
-  display: none;
-  opacity: 0; /* Set opacity to 0 when hidden */
-  pointer-events: none; /* Disable pointer events when hidden */
-  height: 0; /* Set height to 0 when hidden */
-  overflow: hidden; /* Hide overflow content when hidden */
 }
 
 footer {
