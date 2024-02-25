@@ -102,30 +102,14 @@
       <div class="infoboxes">
         <h1>The basics</h1>
         <div class="info_buttons">
-          <button
-            class="selector_btn"
-            id="entities"
-            onclick="toggleButton(this)"
-          >
-            Entities
-          </button>
-          <button
-            class="selector_btn"
-            id="relationships"
-            onclick="toggleButton(this)"
-          >
+          <button class="selector_btn" id="entities_btn">Entities</button>
+          <button class="selector_btn" id="relationships_btn">
             Relationships
           </button>
-          <button
-            class="selector_btn"
-            id="attributes"
-            onclick="toggleButton(this)"
-          >
-            Attributes
-          </button>
+          <button class="selector_btn" id="attributes_btn">Attributes</button>
         </div>
         <div class="infoboxes_container">
-          <div class="container">
+          <div class="container" id="entities">
             <div class="shadow"></div>
             <div class="info_box">
               <h3>Tables</h3>
@@ -138,7 +122,7 @@
             </div>
           </div>
 
-          <div class="container">
+          <div class="container" id="attributes">
             <div class="shadow"></div>
             <div class="info_box">
               <h3>Attributes</h3>
@@ -151,7 +135,7 @@
             </div>
           </div>
 
-          <div class="container">
+          <div class="container" id="relationships">
             <div class="shadow"></div>
             <div class="info_box">
               <h3>Relationships</h3>
@@ -164,7 +148,7 @@
             </div>
           </div>
 
-          <div class="container">
+          <div class="container" id="entities">
             <div class="shadow"></div>
             <div class="info_box">
               <h3>Weak Entities</h3>
@@ -177,7 +161,33 @@
             </div>
           </div>
 
-          <div class="container">
+          <div class="container" id="relationships">
+            <div class="shadow"></div>
+            <div class="info_box">
+              <h3>Entity Relationship</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Assumenda rem, quas iure maiores enim, aut ducimus cum non illum
+                aspernatur fugiat voluptatibus praesentium dolorem, error itaque
+                doloribus
+              </p>
+            </div>
+          </div>
+
+          <div class="container" id="relationships">
+            <div class="shadow"></div>
+            <div class="info_box">
+              <h3>Attribute Relationship</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Assumenda rem, quas iure maiores enim, aut ducimus cum non illum
+                aspernatur fugiat voluptatibus praesentium dolorem, error itaque
+                doloribus
+              </p>
+            </div>
+          </div>
+
+          <div class="container" id="attributes">
             <div class="shadow"></div>
             <div class="info_box">
               <h3>Many To Many</h3>
@@ -190,7 +200,20 @@
             </div>
           </div>
 
-          <div class="container">
+          <div class="container" id="entities">
+            <div class="shadow"></div>
+            <div class="info_box">
+              <h3>Primary Keys</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Assumenda rem, quas iure maiores enim, aut ducimus cum non illum
+                aspernatur fugiat voluptatibus praesentium dolorem, error itaque
+                doloribus
+              </p>
+            </div>
+          </div>
+
+          <div class="container" id="attributes">
             <div class="shadow"></div>
             <div class="info_box">
               <h3>Many To Exacly One</h3>
@@ -203,7 +226,7 @@
             </div>
           </div>
 
-          <div class="container">
+          <div class="container" id="attributes">
             <div class="shadow"></div>
             <div class="info_box">
               <h3>Many to At Least One</h3>
@@ -218,7 +241,7 @@
         </div>
       </div>
     </main>
-
+    <div class="divider"></div>
     <footer>
       <div class="vadsattahar"></div>
       <div class="extra_container">

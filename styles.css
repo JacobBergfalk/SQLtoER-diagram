@@ -179,29 +179,25 @@ textarea {
   padding-top: 1rem;
 }
 
-.container:nth-child(odd) .info_box {
-  background-color: #d7e8c8; /* Adjust background color for odd rows */
-  grid-column-end: span 2; /* Make odd boxes wider */
-}
-
-.container:nth-child(even) .info_box {
-  background-color: #b1d0d6; /* Adjust background color for even rows */
-  -ms-grid-column-span: 4;
-}
-
-.container:nth-child(3n) .info_box {
-  background-color: #f5ddbd; /* Adjust background color for even rows */
-}
-
 .container {
   position: relative;
-  display: grid;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#entities .info_box {
+  background-color: #d7e8c8;
+  grid-column-end: span 2; /* MAKE WORK ????*/
+}
+#relationships .info_box {
+  background-color: #b1d0d6;
+}
+#attributes .info_box {
+  background-color: #f5ddbd;
 }
 
 .info_box {
-  /*background-color: #ffcccc; /* Adjust background color */
   padding: 32px;
-  border: 2px solid #000000; /* Adjust border color */
+  border: 2px solid #000000;
   border-radius: 16px;
   transition: ease 0.3s;
 }
@@ -209,6 +205,7 @@ textarea {
 .info_box:hover {
   transform: scale(1.06); /* Enlarge the box on hover */
 }
+
 /* BUTTONS */
 .buttons {
   text-align: center;
@@ -294,37 +291,37 @@ button.pressed::before {
 }
 
 /* Custom colors for buttons*/
-#entities {
+#entities_btn {
+  background-color: #d7e8c8;
+  border-color: #acb9a0;
+}
+
+#entities_btn::before {
+  background: #d7e8c8;
+  -webkit-box-shadow: 0 0 0 2px #acb9a0;
+  box-shadow: 0 0 0 2px #acb9a0;
+}
+
+#relationships_btn {
   background-color: #b1d0d6;
   border-color: #869fa4;
 }
 
-#entities::before {
-  background: #b7c7ca;
+#relationships_btn::before {
+  background: #b1d0d6;
   -webkit-box-shadow: 0 0 0 2px #869fa4;
   box-shadow: 0 0 0 2px #869fa4;
 }
 
-#relationships {
+#attributes_btn {
   background-color: #f5ddbd;
   border-color: #cbb79c;
 }
 
-#relationships::before {
-  background: #ebdac3;
+#attributes_btn::before {
+  background: #f5ddbd;
   -webkit-box-shadow: 0 0 0 2px #cbb79c;
   box-shadow: 0 0 0 2px #cbb79c;
-}
-
-#attributes {
-  background-color: #d7e8c8; /* Example custom color for Attributes button */
-  border-color: #acb9a0; /* Example custom border color for Attributes button */
-}
-
-#attributes::before {
-  background: #d7e8c8;
-  -webkit-box-shadow: 0 0 0 2px #acb9a0;
-  box-shadow: 0 0 0 2px #acb9a0;
 }
 
 .links {
@@ -339,6 +336,14 @@ button.pressed::before {
 
 .links:hover {
   background-size: 4px 50px;
+}
+
+.hidden {
+  display: none;
+  opacity: 0; /* Set opacity to 0 when hidden */
+  pointer-events: none; /* Disable pointer events when hidden */
+  height: 0; /* Set height to 0 when hidden */
+  overflow: hidden; /* Hide overflow content when hidden */
 }
 
 footer {
