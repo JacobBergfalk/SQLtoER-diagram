@@ -24,15 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var entityBlocks = document.querySelectorAll(".container#entities");
     entityBlocks.forEach(function (block) {
       if (block.style.display === "none") {
-        block.style.display = "block"; // Show the block before toggling opacity
+        block.style.display = "block";
         setTimeout(() => {
           block.classList.toggle("hidden");
-        }, 10); // Delay the opacity transition to ensure the display transition completes
+        }, 10);
       } else {
         block.classList.toggle("hidden");
         setTimeout(() => {
-          block.style.display = "none"; // Hide the block after toggling opacity
-        }, 380); // Adjust the delay to match the transition duration
+          block.style.display = "none";
+        }, 380);
       }
     });
   }
@@ -46,15 +46,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var entityBlocks = document.querySelectorAll("#relationships");
     entityBlocks.forEach(function (block) {
       if (block.style.display === "none") {
-        block.style.display = "block"; // Show the block before toggling opacity
+        block.style.display = "block";
         setTimeout(() => {
           block.classList.toggle("hidden");
-        }, 10); // Delay the opacity transition to ensure the display transition completes
+        }, 10);
       } else {
         block.classList.toggle("hidden");
         setTimeout(() => {
-          block.style.display = "none"; // Hide the block after toggling opacity
-        }, 380); // Adjust the delay to match the transition duration
+          block.style.display = "none";
+        }, 380);
       }
     });
   }
@@ -68,15 +68,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var entityBlocks = document.querySelectorAll("#attributes");
     entityBlocks.forEach(function (block) {
       if (block.style.display === "none") {
-        block.style.display = "block"; // Show the block before toggling opacity
+        block.style.display = "block";
         setTimeout(() => {
           block.classList.toggle("hidden");
-        }, 10); // Delay the opacity transition to ensure the display transition completes
+        }, 10);
       } else {
         block.classList.toggle("hidden");
         setTimeout(() => {
-          block.style.display = "none"; // Hide the block after toggling opacity
-        }, 380); // Adjust the delay to match the transition duration
+          block.style.display = "none";
+        }, 380);
       }
     });
   }
